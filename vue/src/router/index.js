@@ -1,6 +1,11 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
+import Home from '@/pages/Home/Home'
+import Login from '@/pages/Account/Login'
+import Mypage from '@/pages/Account/Mypage'
+import Create from '@/pages/Posts/Create'
+import TopList from '@/pages/Posts/TopList'
+import LocalTopList from '@/pages/Posts/LocalTopList'
 
 Vue.use(Router)
 
@@ -8,8 +13,38 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
-    }
+      name: 'Home',
+      component: Home
+    },
+    {
+      path: '/home',
+      name: 'Home',
+      component: Home
+    },
+    {
+      path: '/login',
+      name: 'Login',
+      component: Login
+    },
+    {
+      path: '/mypage',
+      name: 'Mypage',
+      component: Mypage
+    },
+    {
+      path: '/create',
+      name: 'Create',
+      component: Create
+    },
+    {
+      path: '/topcafe',
+      name: 'TopList',
+      component: TopList
+    },
+    {
+      path: '/localtopcafe',
+      name: 'LocalTopList',
+      component: LocalTopList
+    },
   ]
 })

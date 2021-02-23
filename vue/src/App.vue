@@ -1,13 +1,20 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <div class="nav-wrap">
+      <Nav></Nav>
+      <span class="logo">coffeelog</span>
+    </div>
     <router-view/>
   </div>
 </template>
 
 <script>
+import Nav from '@/components/Nav.vue'
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    Nav
+  }
 }
 </script>
 
@@ -19,5 +26,26 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+a, button{
+  text-decoration: none;
+  list-style: none;
+}
+
+.nav-wrap{
+  display: flex;
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 55px;
+  line-height: 55px;
+}
+
+.logo{
+  font-size: x-large;
+  font-weight: 800;
+  margin: 0 auto;
 }
 </style>
