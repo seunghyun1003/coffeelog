@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: 'localtoplist'
+  name: 'LocalTopList'
 }
 </script>
 

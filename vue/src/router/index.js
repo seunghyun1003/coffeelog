@@ -4,6 +4,7 @@ import Home from '@/pages/Home/Home'
 import Login from '@/pages/Account/Login'
 import Mypage from '@/pages/Account/Mypage'
 import Create from '@/pages/Posts/Create'
+import Detail from '@/pages/Posts/Detail'
 import TopList from '@/pages/Posts/TopList'
 import LocalTopList from '@/pages/Posts/LocalTopList'
 
@@ -32,9 +33,14 @@ export default new Router({
       component: Mypage
     },
     {
-      path: '/create',
+      path: '/create/:contentId?',
       name: 'Create',
       component: Create
+    },
+    {
+      path: '/detail/:contentId',
+      name: 'Detail',
+      component: Detail
     },
     {
       path: '/topcafe',
