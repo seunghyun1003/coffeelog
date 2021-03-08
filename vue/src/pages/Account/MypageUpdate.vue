@@ -1,22 +1,25 @@
 <template>
   <div>
     <UserInfo></UserInfo>
-    <MyPostList></MyPostList>
+    <UserInfoForm></UserInfoForm>
+    <SubmitBtn></SubmitBtn>
   </div>
 </template>
 
 <script>
 import UserInfo from '@/components/etc/UserInfo.vue'
-import MyPostList from '@/components/etc/MyPostList.vue'
+import UserInfoForm from '@/components/Forms/UserInfoForm.vue'
+import SubmitBtn from '@/components/etc/SubmitBtn.vue'
 export default {
-  name: 'Mypage',
+  name: 'MypageUpdate',
   data() {
       return {
       }
   },
   components: {
     UserInfo,
-    MyPostList,
+    UserInfoForm,
+    SubmitBtn,
   }
 }
 </script>
