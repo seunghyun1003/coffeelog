@@ -12,8 +12,8 @@ import VeeValidate from 'vee-validate'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-import {} from '@fortawesome/free-solid-svg-icons'
-library.add()
+import { faBars,faHome,faFire,faMap,faEdit } from '@fortawesome/free-solid-svg-icons'
+library.add(faBars,faHome,faFire,faMap,faEdit)
 
 Vue.config.productionTip = false
 
