@@ -3,17 +3,17 @@
         <div class="title">
             <h2>등록</h2>
         </div>
-        <v-container>
-            <v-row>
-                <v-col>
-                <v-btn @click="cancel()">취소</v-btn>
-                </v-col>
-                <v-spacer></v-spacer>
-                <v-col>
-                <v-btn @click="index !== undefined ? reviewupdate() : reviewcreate()">{{ index !== undefined ? "수정 완료" : "작성 완료" }}</v-btn>
-                </v-col>
-            </v-row>
-        </v-container>
+        <b-container>
+            <b-row>
+                <b-col>
+                <b-btn @click="cancel()">취소</b-btn>
+                </b-col>
+                <b-spacer></b-spacer>
+                <b-col>
+                <b-btn @click="index !== undefined ? reviewupdate() : reviewcreate()">{{ index !== undefined ? "수정 완료" : "작성 완료" }}</b-btn>
+                </b-col>
+            </b-row>
+        </b-container>
         <div class="review-content">
             <textarea 
                 v-model="content"
@@ -23,9 +23,9 @@
             </textarea>
             <v-img class="preview-img"></v-img>
         </div>
-        <v-container>
-            <v-row>
-                <v-col>
+        <b-container>
+            <b-row>
+                <b-col>
                     <input 
                         ref="imageInput" 
                         type="file" 
@@ -35,36 +35,36 @@
                         accept="image/png, image/jpeg, image/bmp"
                         hidden 
                     >
-                    <v-btn type="button">
-                        <v-icon>mdi-camera</v-icon>
-                    </v-btn>
-                </v-col>
-                <v-col>
-                    <v-text-field  
+                    <b-btn type="button">
+                        <b-icon>mdi-camera</b-icon>
+                    </b-btn>
+                </b-col>
+                <b-col>
+                    <b-text-field  
                         v-model="cafe_name"
                         label="cafe_name" 
                         placeholder="카페명"
                     >
-                    </v-text-field>
-                </v-col>
-                <v-col>
-                    <v-text-field 
+                    </b-text-field>
+                </b-col>
+                <b-col>
+                    <b-text-field 
                         v-model="cafe_location"
                         label="cafe_location" 
                         placeholder="장소 직접 입력"
                     >
-                    </v-text-field>
-                </v-col>
-                <v-col>
-                    <v-rating
+                    </b-text-field>
+                </b-col>
+                <b-col>
+                    <b-rating
                         v-model="rating"
                         background-color="orange lighten-3"
                         color="orange"
                         medium
-                    ></v-rating>
-                </v-col>
-            </v-row>
-        </v-container>
+                    ></b-rating>
+                </b-col>
+            </b-row>
+        </b-container>
     
     </div>
 </template>

@@ -1,24 +1,20 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '@/pages/Home/Home'
+import Home from '@/pages/Home'
 import Login from '@/pages/Account/Login'
+import Register from '@/pages/Account/Register'
 import Mypage from '@/pages/Account/Mypage'
-import Create from '@/pages/Posts/Create'
+import Create from '@/pages/Posts/Write'
 import Detail from '@/pages/Posts/Detail'
-import TopList from '@/pages/Posts/TopList'
-import LocalTopList from '@/pages/Posts/LocalTopList'
+import TopList from '@/pages/List/TopList'
+import LocalTopList from '@/pages/List/LocalList'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
-      path: '/',
-      name: 'Home',
-      component: Home
-    },
-    {
-      path: '/home',
+      path: '*',
       name: 'Home',
       component: Home
     },
@@ -26,6 +22,11 @@ export default new Router({
       path: '/login',
       name: 'Login',
       component: Login
+    },
+    {
+      path: '/register',
+      name: 'Register',
+      component: Register
     },
     {
       path: '/mypage',

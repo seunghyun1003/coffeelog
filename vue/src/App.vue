@@ -42,7 +42,6 @@ a, button{
   height: 55px;
   line-height: 55px;
 }
-
 .logo{
   font-size: x-large;
   font-weight: 800;

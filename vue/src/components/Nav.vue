@@ -53,4 +53,7 @@ export default {
 a{
     color: black;
 }
+.b-sidebar{
+    z-index:1000;
+}
 </style>
