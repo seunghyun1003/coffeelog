@@ -25,20 +25,19 @@
                     </b-btn>
                 </b-col>
             </b-row>
+            <div class="review-content">
+                <v-text-field
+                    v-model="title"
+                    label="제목"
+                    clearable
+                ></v-text-field>
+                <textarea 
+                    v-model="content"
+                    placeholder="리뷰 작성"
+                >
+                </textarea>
+            </div>
         </b-container>
-        <div class="review-content">
-            <v-text-field
-                v-model="title"
-                label="제목"
-                clearable
-            ></v-text-field>
-            <textarea 
-                v-model="content"
-                placeholder="리뷰 작성"
-            >
-            </textarea>
-            <v-img class="preview-img"></v-img>
-        </div>
     </div>
 </template>
 

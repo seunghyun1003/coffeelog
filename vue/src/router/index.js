@@ -35,7 +35,7 @@ export default new Router({
       component: Mypage
     },
     {
-      path: '/mypage/:userId?',
+      path: '/mypage/update',
       name: 'MypageUpdate',
       component: MypageUpdate
     },

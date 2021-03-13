@@ -42,7 +42,7 @@ export default {
             })
         },
         cancel() {
-            var conf = confirm("리뷰작성을 취소하시겠습니까?");
+            var conf = confirm("작성을 취소하시겠습니까?");
             if(conf){
                 this.$router.push({
                     path: '/'
