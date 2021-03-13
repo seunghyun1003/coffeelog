@@ -42,7 +42,7 @@
             >
             가입완료
             </b-btn>
-            <div><router-link to="/login">이미 회원이시라면? Login</router-link></div>
+            <div><router-link to="/login">이미 회원이시라면?</router-link></div>
         </div>
     </b-card>
 </b-container>

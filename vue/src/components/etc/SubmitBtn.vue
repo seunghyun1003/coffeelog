@@ -1,13 +1,17 @@
 <template>
-    <div id="create">
+    <div id="btns">
         <b-container>
             <b-row>
                 <b-col>
-                <b-btn @click="cancel()">취소</b-btn>
+                    <b-btn @click="cancel()">취소</b-btn>
                 </b-col>
-                <b-spacer></b-spacer>
                 <b-col>
-                <b-btn @click="index !== undefined ? reviewupdate() : reviewcreate()">{{ index !== undefined ? "수정 완료" : "작성 완료" }}</b-btn>
+                    <b-btn 
+                    @click="index !== undefined ? reviewupdate() : reviewcreate()"
+                    variant="primary"
+                    >
+                        {{ index !== undefined ? "수정 완료" : "작성 완료" }}
+                    </b-btn>
                 </b-col>
             </b-row>
         </b-container>
@@ -50,4 +54,12 @@ export default {
 </script>
 
 <style scoped>
+#btns{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+button{
+    width: 100%;
+}
 </style>

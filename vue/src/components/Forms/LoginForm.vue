@@ -35,7 +35,7 @@
                 로그인
                 </b-btn>
             </div>
-            <div><router-link to="/register">아직 회원이 아니시라면? Sign Up</router-link></div>
+            <div><router-link to="/register">아직 회원이 아니시라면?</router-link></div>
         </b-card>
     </div>
 </template>
@@ -46,7 +46,6 @@ export default {
     name: 'Login',
     data() {
         return {
-            title: 'Login',
             email : '',
             password : '',
         }

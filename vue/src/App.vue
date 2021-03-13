@@ -2,7 +2,7 @@
   <div id="app">
     <div class="nav-wrap">
       <Nav></Nav>
-      <span class="logo">coffeelog</span>
+      <span class="logo">{{pagetitle}}</span>
     </div>
     <router-view/>
   </div>
@@ -12,6 +12,11 @@
 import Nav from '@/components/etc/Nav.vue'
 export default {
   name: 'App',
+  data() {
+    return {
+      pagetitle:"coffeelog",
+    }
+  },
   components: {
     Nav
   }
@@ -25,22 +30,19 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 
-a, button{
+a, a:hover, button, li{
   text-decoration: none;
   list-style: none;
 }
 
 .nav-wrap{
   display: flex;
-  position: fixed;
-  top:0;
-  left: 0;
   width: 100%;
   height: 55px;
   line-height: 55px;
+  border-bottom: 1px solid black;
 }
 .logo{
   font-size: x-large;
