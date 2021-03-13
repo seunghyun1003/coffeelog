@@ -2,6 +2,9 @@
     <div>
         <b-container>
             <b-row>
+                <ImagePreview></ImagePreview>
+            </b-row>
+            <b-row>
                 <b-col>
                     <b-btn type="button">
                         <font-awesome-icon icon="thumbtack"/> 카페 장소
@@ -41,15 +44,20 @@
 
 <script>
 import data from '@/data';
+import ImagePreview from '@/components/etc/ImagePreview.vue'
 
 export default {
     name: 'Create',
+    components: {
+        ImagePreview,
+    },
     data(){
         const index = this.$route.params.contentId
         return{
             pagetitle:index !== undefined ? "수정" : "등록",
             data:data,
             index: index,
+            title : index !== undefined ? data[index].title : "",
             cafe_name : index !== undefined ? data[index].cafe_name : "",
             cafe_location : index !== undefined ? data[index].view.cafe_location : "",
             content : index !== undefined ? data[index].content : "",

@@ -5,9 +5,7 @@
       </div>
       <div class="review-list">
           <div class="review-item" :key="index" v-for="(value, index) in data" @click="detailshow(index)">
-            <li>{{ value.cafe_name }}</li>
-            <li>{{ value.cafe_location }}</li>
-            <li>{{ value.content }}</li>
+            <li>{{ value.title }}</li>
           </div>
       </div>
   </div>

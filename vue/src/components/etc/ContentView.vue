@@ -1,5 +1,7 @@
 <template>
     <div>
+        <li>{{ data.title }}</li>
+        <ImageSlider></ImageSlider>
         <div>
             <li>{{ data.cafe_name }}</li>
             <li>{{ data.cafe_location }}</li>
@@ -10,6 +12,7 @@
 
 <script>
 import data from "@/data";
+import ImageSlider from '@/components/etc/ImageSlider.vue'
 
 export default {
     name: 'Detail',
@@ -20,6 +23,9 @@ export default {
             index: index,
         }
     },
+    components: {
+        ImageSlider,
+    }
 };
 </script>
 
