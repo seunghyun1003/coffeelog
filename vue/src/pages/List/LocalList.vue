@@ -1,12 +1,12 @@
 <template>
-  <div id="localtoplist">
+  <div id="locallist">
       지역별 인기 게시글
   </div>
 </template>
 
 <script>
 export default {
-  name: 'LocalTopList'
+  name: 'LocalList'
 }
 </script>
 

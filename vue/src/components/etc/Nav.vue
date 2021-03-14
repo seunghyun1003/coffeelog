@@ -6,24 +6,34 @@
 
         <b-sidebar
             id="sidebar-backdrop"
-            title="회원님"
+            title="coffeelog"
             backdrop
             shadow
         >
-            <div v-if="user">
-                <router-link to="/mypage">마이페이지></router-link>
+            <div class="nav-userinfo">
+                <div v-if="user">
+                    <div>유저님</div>
+                    <div><router-link to="/mypage">마이페이지></router-link></div>
+                </div>
+                <div v-else>
+                    <span>-님</span>
+                </div>
             </div>
-            <ul class="nav-link-wrap">
+            <ul class="nav-link">
                 <li><router-link to="/home"><font-awesome-icon icon="home"/>home</router-link></li>
                 <li><router-link to="/topcafe"><font-awesome-icon icon="fire"/>인기 게시글</router-link></li>
                 <li><router-link to="/localtopcafe"><font-awesome-icon icon="map"/>지역별 게시글</router-link></li>
             </ul>
-            <div>
+            <div class="nav-btns">
                 <div v-if="user">
-                    <div @click="logout">로그아웃</div>
+                    <b-btn>
+                        <div @click="logout">로그아웃</div>
+                    </b-btn>
                 </div>
                 <div v-else>
-                    <router-link to="/login">로그인</router-link>
+                    <b-btn>
+                        <router-link to="/login">로그인</router-link>
+                    </b-btn>
                 </div>
             </div>
         </b-sidebar>
@@ -53,7 +63,22 @@ export default {
 a{
     color: black;
 }
-.b-sidebar{
-    z-index:1000;
+.nav-userinfo{
+    border-bottom: 1px solid black;
+}
+.nav-link > li{
+    border-bottom: 1px solid black;
+}
+.nav-btns{
+    position: fixed;
+    bottom:0;
+    width:100%;
+}
+.nav-btns button{
+    width:92%;
+    margin: 0 4%;
+}
+.nav-btns a{
+    color: white;
 }
 </style>

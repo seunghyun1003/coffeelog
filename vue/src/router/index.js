@@ -5,7 +5,7 @@ import Login from '@/pages/Account/Login'
 import Register from '@/pages/Account/Register'
 import Mypage from '@/pages/Account/Mypage'
 import MypageUpdate from '@/pages/Account/MypageUpdate'
-import Create from '@/pages/Posts/Write'
+import Write from '@/pages/Posts/Write'
 import Detail from '@/pages/Posts/Detail'
 import TopList from '@/pages/List/TopList'
 import LocalTopList from '@/pages/List/LocalList'
@@ -35,14 +35,14 @@ export default new Router({
       component: Mypage
     },
     {
-      path: '/mypage/:userId?',
+      path: '/mypage/update',
       name: 'MypageUpdate',
       component: MypageUpdate
     },
     {
-      path: '/create/:contentId?',
-      name: 'Create',
-      component: Create
+      path: '/write/:contentId?',
+      name: 'Write',
+      component: Write
     },
     {
       path: '/detail/:contentId',

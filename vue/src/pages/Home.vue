@@ -1,5 +1,6 @@
 <template>
   <div id="home">
+      <button class="create-btn"><router-link to="/write"><font-awesome-icon icon="edit"/></router-link></button>
       <div>
         인기동네
       </div>
@@ -7,13 +8,13 @@
         많이 본 게시글
       </div>
       <div class="review-list">
-            <div class="review-item" :key="index" v-for="(value, index) in data" @click="detailshow(index)">
-              <li>{{ value.cafe_name }}</li>
-              <li>{{ value.cafe_location }}</li>
-              <li>{{ value.content }}</li>
-            </div>
-        </div>
-      <button class="create-btn"><router-link to="/create"><font-awesome-icon icon="edit"/></router-link></button>
+          <div class="review-item" :key="index" v-for="(value, index) in data" @click="detailshow(index)">
+            <li>{{ value.title }}</li>
+            <li>{{ value.cafe_name }}</li>
+            <li>{{ value.cafe_location }}</li>
+            <li>{{ value.content }}</li>
+          </div>
+      </div>
   </div>
 </template>
 

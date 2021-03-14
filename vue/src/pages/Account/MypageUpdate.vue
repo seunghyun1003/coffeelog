@@ -1,8 +1,6 @@
 <template>
   <div>
-    <UserInfo></UserInfo>
     <UserInfoForm></UserInfoForm>
-    <SubmitBtn></SubmitBtn>
   </div>
 </template>
 
