@@ -7,7 +7,7 @@
 <script>
 import ContentView from '@/components/etc/ContentView.vue'
 export default {
-  name: 'detail',
+  name: 'Detail',
   components: {
     ContentView,
   }

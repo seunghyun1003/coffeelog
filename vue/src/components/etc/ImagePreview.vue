@@ -46,10 +46,8 @@
 </template>
 
 <script>
-import data from '@/data';
-
 export default {
-    name: 'Create',
+    name: 'ImagePreview',
     data(){
         const index = this.$route.params.contentId
         return{
@@ -60,12 +58,4 @@ export default {
 </script>
 
 <style scoped>
-.review-content{
-    width: 100%;
-    height: 100%;
-    border: 1px solid gray;
-}
-.preview-img{
-    width: 200px;
-}
 </style>

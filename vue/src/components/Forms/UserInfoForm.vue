@@ -4,22 +4,36 @@
             유저 사진<br/>
             사진 선택>
         </div>
-        <div>
-            <div>
-                <label for="username">이름</label>
-                <textarea
-                    v-model="username"
-                    clearable
-                ></textarea>
+        <b-form>
+            <b-form-group 
+                id="input-group-1" 
+                label="이름" 
+                label-for="input-1"
+            >
+                <b-form-input
+                id="input-1"
+                v-model="username"
+                placeholder="Enter name"
+                ></b-form-input>
+            </b-form-group>
+            <b-form-group
+                id="input-group-2"
+                label="Email"
+                label-for="input-2"
+            >
+                <b-form-input
+                id="input-2"
+                v-model="useremail"
+                type="email"
+                placeholder="Enter email"
+                ></b-form-input>
+            </b-form-group>
+            
+            <div class="submitbtns">
+                <b-button @click="onCancel">취소</b-button>
+                <b-button @click="onSubmit" variant="primary">수정 완료</b-button>
             </div>
-            <div>
-                <label for="useremail">Email</label>
-                <textarea 
-                    v-model="useremail"
-                >
-                </textarea>
-            </div>
-        </div>
+        </b-form>
     </div>
 </template>
 
@@ -36,16 +50,22 @@ export default {
         }
     },
     methods: {
-        reviewcreate() {
-            this.data.push({
-                username : this.username,
-                useremail : this.useremail,
-            })
+        onSubmit(event) {
+            data[this.index].username = this.username
+            data[this.index].useremail = this.useremail
             this.$router.push({
-                path: '/mypage/update'
+                path: '/mypage'
             })
         },
-    },
+        onCancel(event) {
+            var conf = confirm("수정을 취소하시겠습니까?");
+            if(conf){
+                this.$router.push({
+                    path: '/mypage'
+                })
+            }
+        }
+    }
 }
 </script>
 
@@ -53,5 +73,16 @@ export default {
 .userimgform{
     height: 10em;
     border-bottom: 1px solid black;
+}
+.submitbtns{
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.submitbtns > button{
+    width: 96%;
+    margin: 2%;
+
 }
 </style>

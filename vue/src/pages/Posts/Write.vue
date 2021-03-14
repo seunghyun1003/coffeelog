@@ -12,16 +12,16 @@ import ImageForm from '@/components/etc/ImagePreview.vue'
 import ContentForm from '@/components/Forms/ContentForm.vue'
 import SubmitBtn from '@/components/etc/SubmitBtn.vue'
 export default {
-  name: 'Mypage',
-  data() {
-      return {
-      }
-  },
-  components: {
-    ImageForm,
-    ContentForm,
-    SubmitBtn,
-  }
+    name: 'Write',
+    data() {
+        return {
+        }
+    },
+    components: {
+        ImageForm,
+        ContentForm,
+        SubmitBtn,
+    }
 }
 </script>
 
