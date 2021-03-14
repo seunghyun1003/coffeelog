@@ -2,7 +2,7 @@
   <div id="app">
     <div class="nav-wrap">
       <Nav></Nav>
-      <span class="logo">{{pagetitle}}</span>
+      <span class="logo">{{ pageTitle }}</span>
     </div>
     <router-view/>
   </div>
@@ -12,14 +12,14 @@
 import Nav from '@/components/etc/Nav.vue'
 export default {
   name: 'App',
-  data() {
-    return {
-      pagetitle:"coffeelog",
-    }
-  },
   components: {
     Nav
-  }
+  },
+  data() {
+    return {
+      pageTitle: 'coffeelog',
+    }
+  },
 }
 </script>
 

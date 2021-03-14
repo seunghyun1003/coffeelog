@@ -27,6 +27,7 @@
                 type="email"
                 placeholder="Enter email"
                 ></b-form-input>
+                <b-button @click="onDupcheck">중복 검사</b-button>
             </b-form-group>
             
             <div class="submitbtns">
@@ -50,6 +51,9 @@ export default {
         }
     },
     methods: {
+        onDupcheck(event) {
+            alert('사용가능한 이메일입니다.')
+        },
         onSubmit(event) {
             data[this.index].username = this.username
             data[this.index].useremail = this.useremail
